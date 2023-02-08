@@ -26,7 +26,7 @@ pipeline {
             steps {
                 sh ''' 
                 docker stop ttd-frontend || true
-                docker run -p3000:80 -- name ttd-frontend serdar52/java-17-demo:jenkins-${BUILD_NUMBER}
+                docker run -p3000:80 -d -- name ttd-frontend serdar52/java-17-demo:jenkins-${BUILD_NUMBER}
                 '''
                 }
             }
